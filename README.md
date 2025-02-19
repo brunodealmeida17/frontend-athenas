@@ -1,59 +1,60 @@
-# Frontend
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.1.7.
+# 🎨 Frontend - Angular (Gerenciamento de Pessoas)
 
-## Development server
+Este é o frontend da aplicação, desenvolvido com **Angular 15+**, proporcionando uma interface interativa para o cadastro de pessoas e cálculo do peso ideal.
 
-To start a local development server, run:
+## 📂 Estrutura do Projeto
 
+```
+frontend/
+│── src/
+│   ├── app/
+│   │   ├── components/         # Componentes reutilizáveis
+│   │   │   ├── pessoa-list/    # Lista de pessoas
+│   │   │   ├── pessoa-form/    # Formulário (modal) de cadastro
+│   │   ├── services/           # Comunicação com API (PessoaService)
+│   │   ├── app.component.ts    # Componente principal
+│   │   ├── app.component.html  # Template principal
+│── angular.json                # Configuração do Angular
+│── package.json                # Dependências do projeto
+│── tsconfig.json               # Configuração do TypeScript
+```
+
+## 🚀 Como Rodar o Projeto
+
+### **1️⃣ Instalar o Node.js**
+Certifique-se de ter o **Node.js 16+** instalado.
+
+### **2️⃣ Instalar as Dependências**
+```bash
+npm install
+```
+
+### **3️⃣ Configurar o Backend**
+No arquivo `pessoa.service.ts`, verifique se a URL da API do backend está correta:
+
+```typescript
+private apiUrl = "http://127.0.0.1:8000/api/pessoas/";
+```
+
+### **4️⃣ Rodar o Servidor Angular**
 ```bash
 ng serve
 ```
+A interface estará disponível em:  
+🔗 `http://localhost:4200`
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## 📌 Funcionalidades da Aplicação
 
-## Code scaffolding
+✅ **Listagem de Pessoas**  
+✅ **Pesquisa por Nome**  
+✅ **Cadastro de Nova Pessoa (modal)**  
+✅ **Edição e Exclusão de Pessoas**  
+✅ **Cálculo do Peso Ideal**  
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## 🎯 Tecnologias Utilizadas
+- **Angular 15+**
+- **Bootstrap**
+- **TypeScript**
+- **Angular Standalone Components**
+- **Angular Services para consumo da API**
